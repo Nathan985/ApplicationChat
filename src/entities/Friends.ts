@@ -1,6 +1,6 @@
-import { Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 
-Entity("Tbl_Friends")
+@Entity("Tbl_Friends")
 export class Friends{
 
   @PrimaryColumn()

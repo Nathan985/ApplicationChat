@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import './database';
 import express from 'express';
 import morgan from 'morgan';
 import variables from 'dotenv';

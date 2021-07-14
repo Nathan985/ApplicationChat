@@ -1,8 +1,8 @@
 import { Entity, Column, PrimaryColumn } from 'typeorm';
 import { GlobalFunctions } from '../functions/GlobalFunctions/GlobalFunctions';
 
-Entity("Tbl_Messages")
-export class Message{
+@Entity("Tbl_Messages")
+export class Message {
 
   @PrimaryColumn()
   _id: string;

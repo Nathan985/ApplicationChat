@@ -8,13 +8,13 @@ export default {
   password: process.env.TYPEORM_PASS,
   database: process.env.TYPEORM_DBA,
   entities: [
-    "src/entities/*.ts"
+    __dirname + "/src/entities/*.ts"
   ],
   migrations: [
-    "src/database/migrations/*.ts"
+    __dirname + "/src/database/migrations/*.ts"
   ],
   cli: {
-    entitiesDir: "src/entities",
-    migrationsDir: "src/database/migrations",
+    entitiesDir: __dirname + "/src/entities/",
+    migrationsDir: __dirname + "/src/database/migrations/",
   }
 } as ConnectionOptions
