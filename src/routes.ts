@@ -1,19 +1,22 @@
 import { Router } from "express";
-import { createUserController } from "./useCases/CreateUserUseCase";
 
 const router = Router();
 
 // Rotas da API
 
-router.post('/createUser', (req, res) => {
- return createUserController.handle(req, res)
-})
+router.use((req, res, next) => {
+  const erro = new Error('Not Found')
+  next(erro)
+});
 
-router.get('/initialRoute', (req, res) => {
-  res.status(200);
+router.use((error, req, res, next) => {
+  res.status(error.status || 401)
+
   return res.send({
-    success: 1,
-    message: 'Default Route!'
+      error: {
+          success: 0,
+          mensagem: error.message
+      }
   })
 })
 
