@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",        
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": ["ES6"],
+    "skipLibCheck": true,  
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": false,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "src"
+  ]
+}
