@@ -9,7 +9,6 @@
   "scripts": {
     "start": "tsnd src/server.ts",
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
-    "pretypeorm": "tsnd src/loadingVariables.ts",
     "migrations-run": "yarn typeorm migration:run",
     "typeorm": "tsnd node_modules/typeorm/cli.js"
   },
